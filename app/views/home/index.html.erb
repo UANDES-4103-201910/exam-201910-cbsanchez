@@ -1,0 +1,36 @@
+<div class="row">
+<div class="col-sm-4">
+  <nav class="navbar bg-light">
+    <ul class="navbar-nav">
+      <% @products.each do |p| %>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> <%= p.brand %></a>
+        </li>
+      <%end %>
+    </ul>
+  </nav>
+</div>
+<div class="col-sm-8">
+  <h1>Home</h1>
+  <div class="container">
+    <% @products.each do |p| %>
+      <div class="container Style1">
+        <div class="row">
+          Model:<%= p.model %>
+        </div>
+        <div class="row">
+          Type: <%= p.type_product%>
+        </div>
+
+        <div class="row">
+          Description: <%= p.short_description %>
+        </div>
+        <div class="row">
+         Price: <%= p.price %>
+         </div>
+      </div>
+      <br>
+    <%end %>
+  </div>
+</div>
+</div>
